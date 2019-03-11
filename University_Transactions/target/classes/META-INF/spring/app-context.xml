@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:lang="http://www.springframework.org/schema/lang"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+	<description>Example configuration to get you started.</description>
+	
+<aop:aspectj-autoproxy proxy-target-class ="true" />
+	<context:component-scan base-package="com.npu.university" />
+	
+	
+	
+	<context:annotation-config />
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	 <!--  scan can also do what annotation-config does but also scans packages and registers beans 
+<context:component-scan  base-package="com.npu.config"/>
+	
+	
+	 <bean id="tutionFeeOU" class="com.npu.services.TutionForOhioStUniversity" />
+	           <bean id="paymentServiceWF" class="com.npu.services.WellsFargoPaymentServiceImpl" />
+	           <bean id="tutionCalculatorServiceNU" class="com.npu.services.TutionForNationalUniversity" />
+                <bean id="paymentServicePP" class="com.npu.services.PayPalPaymentServiceImpl" >
+	            <qualifier   value="default_paymentService"/>
+            </bean>
+	      
+	
+  <bean id="studentCheckout" class="com.npu.services.StudentCheckoutServiceImpl" >
+	
+
+	              <property name="creditCardNo" value = "555666888"/>
+	
+	  
+                 <property name="creditCardpay" ref = "paymentService" />
+               <property name="tutionFee" ref = "tutionCalculatorService" /> 
+                   </bean>	--> 
+
+	
+
+
+	
+
+</beans>
